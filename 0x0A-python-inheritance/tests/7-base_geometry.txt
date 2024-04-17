@@ -1,0 +1,49 @@
+""" importing the BaseGeo class """
+>>> BG = __import__("7-base_geometry").BaseGeometry
+
+"""checking for the area failure """
+>>> b = BG()
+>>> b.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+"""checking if the method docstring """
+>>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(mod1) > 1
+True
+>>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(mod2) > 1
+True
+
+""" checking if there is class docstring """
+>>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(c) > 1
+True
+
+"""checking for the module docstring """
+>>> m = __import__("7-base_geometry").__doc__
+>>> len(m) > 1
+True
+
+""" checking if there are too many arguments for the area """
+>>> b.area(1)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+
+"""checking if the integer validator is for passing integer """
+>>> b.integer_validator("integer", 1)
+
+"""checking if the integer == 0 """
+>>> b.integer_validator("integer", 0)
+Traceback (most recent call last):
+...
+ValueError: integer must be greater than 0
+
+"""checking if there is an integer < 0;
+>>> b.integer_validator("integer", -5)
+Traceback (most recent call last):
+...
+ValueError: integer must be greater than 0
+

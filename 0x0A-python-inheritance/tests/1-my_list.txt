@@ -1,0 +1,38 @@
+""" print sorted list """
+
+""" Importing the function from the module """
+>>> MyList = __import__("1-my_list").MyList
+
+""" checking if list is empty """
+>>> l = MyList()
+>>> l.print_sorted()
+[]
+
+""" checking for the inheritance """
+>>> issubclass(MyList, list)
+True
+
+""" Checking if appendng works """
+>>> l.append(3)
+>>> l.append(4)
+>>> l.append(6)
+>>> l.append(8)
+>>> print(l)
+[3, 4, 6, 8]
+
+""" checking if the list is in correct order:
+>>> l.print_sorted()
+[3, 4, 6, 8]
+
+"""Checking for any reversed ordered list """
+>>> l = MyList()
+>>> l.append(5)
+>>> l.append(4)
+>>> l.append(3)
+>>> l.append(2)
+>>> print(l)
+[5, 4, 3, 2]
+>>> l.print_sorted()
+[2, 3, 4, 5]
+>>> print(l)
+[5, 4, 3, 2]
