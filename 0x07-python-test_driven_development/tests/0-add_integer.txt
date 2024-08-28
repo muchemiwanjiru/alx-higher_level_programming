@@ -1,4 +1,4 @@
->>> from 0-add_integer import add_integer
+>>> from 0-add_integer.py import add_integer.py
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
@@ -15,4 +15,5 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
 
